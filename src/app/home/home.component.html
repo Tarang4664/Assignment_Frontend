@@ -1,0 +1,19 @@
+<h1 style="text-align: center;">Json DATA</h1>
+<hr>
+
+<table class="table  table-hover  table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Price Type</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of data1">
+
+        <td>{{data.Name}}</td>
+        <td>{{data.PriceType}}</td>
+        <td ><input type="text" pattern="^[0-9]{1,9}" value={{data.Price}}  (change)="onChange($event)"></td>
+        <td><button type="button" title="Update Price."  class="btn btn-outline-success"><i (click)="updateData(data.Name)"  class="fa fa-pencil-square" style="font-size:24px;" aria-hidden="true"></i></button></td>
+
+    </tr>
+</table>
